@@ -17,7 +17,7 @@ class GoodsController extends Controller
     }
 
     public function index(){
-      var_dump($this->goods->all());
+        dd($this->goods->all());
     }
 
 }

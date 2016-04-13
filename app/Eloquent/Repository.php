@@ -15,11 +15,14 @@ abstract class Repository implements RepositoryInterface{
 
     abstract function model();
 
-
-
-    public function all($columns = array('*')){
+    /**
+     * @param array $columns
+     * @return mixed
+     */
+    public function all($columns = array('*')) {
         return $this->model->get($columns);
     }
+
 
     public function paginate($perPage=15,$columns=array('*')){
         return $this->model->paginate();
